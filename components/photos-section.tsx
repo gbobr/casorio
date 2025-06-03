@@ -15,8 +15,8 @@ export default function PhotosSection() {
     { id: 2, src: "/images/couple-lake-selfie.jpg", alt: "Germán y Jazmín - Momento romántico junto al lago" },
     { id: 3, src: "/images/couple-volcano.jpg", alt: "Germán y Jazmín - Aventura con vista al volcán" },
     { id: 4, src: "/images/couple-overlook.jpg", alt: "Germán y Jazmín - Explorando paisajes patagónicos" },
-    { id: 5, src: "/placeholder.svg?height=300&width=400", alt: "Germán y Jazmín - Foto 5" },
-    { id: 6, src: "/placeholder.svg?height=400&width=300", alt: "Germán y Jazmín - Foto 6" },
+    { id: 5, src: "/images/couple-indoor-selfie.jpg", alt: "Germán y Jazmín - Momento íntimo" },
+    { id: 6, src: "/images/couple-formal-event.jpg", alt: "Germán y Jazmín - Celebrando juntos" },
   ]
 
   const openModal = (index: number) => {
@@ -67,7 +67,14 @@ export default function PhotosSection() {
                   height={400}
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   style={{
-                    objectPosition: photo.id === 2 ? "center 60%" : photo.id === 3 ? "center 55%" : "center center",
+                    objectPosition:
+                      photo.id === 2
+                        ? "center 60%"
+                        : photo.id === 3
+                          ? "center 55%"
+                          : photo.id === 5
+                            ? "center 41%"
+                            : "center center",
                   }}
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
