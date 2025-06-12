@@ -6,7 +6,7 @@ import { useState } from "react"
 
 export default function GiftsSection() {
   const [copied, setCopied] = useState(false)
-  const bankAlias = "CASTOR.LIMON.RODANTE"
+  const bankAlias = "LIMON.CASTOR.RODANTE"
 
   const copyToClipboard = async () => {
     try {
